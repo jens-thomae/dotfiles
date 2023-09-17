@@ -109,6 +109,7 @@ source $ZSH/oh-my-zsh.sh
 alias zshe="nvim ~/.zshrc"
 alias zshr="source ~/.zshrc"
 alias config="cd ~/.config"
+alias dotfiles="cd ~/dotfiles"
 
 clear
 neofetch
