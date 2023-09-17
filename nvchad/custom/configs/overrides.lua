@@ -5,6 +5,7 @@ M.treesitter = {
     -- defaults
     "vim",
     "lua",
+    "python",
 
     -- java
     "java",
@@ -39,6 +40,7 @@ M.mason = {
     -- lua stuff
     "lua-language-server",
     "stylua",
+    "python",
 
     -- web dev stuff
     "css-lsp",
