@@ -10,3 +10,4 @@ local set = vim.opt
 set.scrolloff = 4
 set.tabstop = 4
 set.shiftwidth = 4
+
