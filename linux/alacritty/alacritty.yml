@@ -49,7 +49,7 @@ import:
 colors:
   # Default colors
   primary:
-    background: '0x000000'
+    # background: '0xababab'
     foreground: '0xc5c8c6'
 
   # Normal colors
