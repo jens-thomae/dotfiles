@@ -16,12 +16,7 @@ end
 M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
-    ["<leader>tt"] = {
-    function()
-     require("base46").toggle_transparency()
-  end,
-  "toggle transparency",
-    },
+    ["<leader>tt"] = {"<cmd>highlight Normal guibg=none<CR>", "enable transparent background"},
 
     ["<leader>tw"] = { toggle_tabwidth, "test" },
   },

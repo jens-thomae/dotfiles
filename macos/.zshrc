@@ -81,7 +81,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
 	ssh-agent
 	git
-	vscode
 	zsh-syntax-highlighting
 	zsh-autosuggestions
 )

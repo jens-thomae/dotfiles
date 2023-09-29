@@ -1,6 +1,3 @@
-        config = function()
-            require("copilot").setup()
-        end
 local overrides = require("custom.configs.overrides")
 
 ---@type NvPluginSpec[]
@@ -50,9 +47,12 @@ local plugins = {
     end,
   },
 
-    {
-        "github/copilot.vim",
-    },
+  {
+    "github/copilot.vim",
+    config = function()
+      require("copilot").setup()
+    end
+  },
 
   -- To make a plugin not be loaded
   -- {

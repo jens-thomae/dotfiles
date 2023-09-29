@@ -9,7 +9,7 @@ export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -110,6 +110,11 @@ alias zshe="nvim ~/.zshrc"
 alias zshr="source ~/.zshrc"
 alias config="cd ~/.config"
 alias dotfiles="cd ~/dotfiles"
+
+alias  l='eza -l  --icons'
+alias ls='eza -1  --icons'
+alias ll='eza -la --icons'
+alias ld='eza -lD --icons'
 
 clear
 neofetch
