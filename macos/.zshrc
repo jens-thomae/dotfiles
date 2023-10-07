@@ -116,7 +116,9 @@ alias zshe="nvim ~/.zshrc"
 alias zshr="source ~/.zshrc"
 alias config="cd ~/.config"
 alias dotfiles="cd ~/dotfiles"
+alias vimc="cd ~/.config/nvim/lua/custom && nvim"
 alias clip="~/dotfiles/macos/copy_file_to_clipboard $@"
+
 alias  l='eza -l  --icons'
 alias ls='eza -1  --icons'
 alias ll='eza -la --icons'

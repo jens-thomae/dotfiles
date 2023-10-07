@@ -110,6 +110,7 @@ alias zshe="nvim ~/.zshrc"
 alias zshr="source ~/.zshrc"
 alias config="cd ~/.config"
 alias dotfiles="cd ~/dotfiles"
+alias vimc="cd ~/.config/nvim/lua/custom && nvim"
 
 alias  l='eza -l  --icons'
 alias ls='eza -1  --icons'
