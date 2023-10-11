@@ -23,7 +23,7 @@ dynamic_title: true
 # Test fonts: https://askubuntu.com/a/528938
 # Test true colors: https://unix.stackexchange.com/a/404415
 font:
-  size: 17
+  size: 16
   normal:
     family: CaskaydiaCove Nerd Font
     style: Regular

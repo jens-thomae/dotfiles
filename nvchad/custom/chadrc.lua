@@ -6,7 +6,7 @@ local highlights = require "custom.highlights"
 
 M.ui = {
   transparency = false,
-  theme = "github_light",
+  theme = "github_dark",
   theme_toggle = { "tokyodark", "one_light" },
 
   hl_override = {

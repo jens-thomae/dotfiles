@@ -82,6 +82,7 @@ local plugins = {
           },
         },
         filetypes = {
+          rs = true,
           yaml = false,
           markdown = false,
           help = false,
