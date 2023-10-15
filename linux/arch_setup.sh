@@ -8,6 +8,9 @@ mkdir ~/.config
 pacman --noconfirm -Syu
 pacman --noconfirm -S base-devel git rust npm python go neofetch plasma plasma-wayland-session nvidia bpytop eza alacritty keepassxc nerd-fonts spotify-launcher discord firefox zsh
 
+# Nvidia modeset fix in default grub config
+/bin/cp -rf ./grub/default/grub /etc/default/grub
+
 # Installing omz
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
