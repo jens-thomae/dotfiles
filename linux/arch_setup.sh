@@ -24,7 +24,7 @@ mkdir ~/.ssh
 ssh-keygen -t ed25519 -C "'$gh_email'" -f ~/.ssh/github -q -N ""
 exec ssh-agent zsh
 ssh-add ~/.ssh/github
-cp ./config ~/.ssh/config
+cp ./ssh/config ~/.ssh/config
 
 # Creating symlink for alacritty config
 ln -s ./alacritty ~/.config/
