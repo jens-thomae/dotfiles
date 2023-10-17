@@ -10,6 +10,7 @@ pacman --noconfirm -S base-devel git rust npm python go neofetch plasma plasma-w
 
 # Nvidia modeset fix in default grub config
 /bin/cp -rf ./grub/default/grub /etc/default/grub
+grub-mkconfig -o /boot/grub/grub.cfg
 
 # Installing omz
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
