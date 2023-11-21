@@ -45,6 +45,26 @@ return {
 		function _lazygit_toggle()
   			lazygit:toggle()
 		end
+
+		local float = Terminal:new({
+  			direction = "float",
+  			float_opts = {
+  			  	border = "double",
+  			},
+  			-- function to run on opening the terminal
+  			on_open = function(term)
+  			  	vim.cmd("startinsert!")
+  			  	vim.api.nvim_buf_set_keymap(term.bufnr, "t", "<M-i>", [[<C-\><C-n> <bar> <Cmd>close<CR>]], {noremap = true, silent = true})
+  			end,
+  			-- function to run on closing the terminal
+  			on_close = function(term)
+  			  	vim.cmd("startinsert!")
+  			end,
+		})
+		function _float_toggle()
+  			float:toggle()
+		end
 		vim.api.nvim_set_keymap("n", "<leader>lg", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
+		vim.api.nvim_set_keymap("n", "<M-i>", "<Cmd>lua _float_toggle()<CR>", {noremap = true, silent = true})
 	end,
 }
