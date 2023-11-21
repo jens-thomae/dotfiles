@@ -15,6 +15,9 @@ vim.keymap.set('n', '<C-l>', [[<Cmd>wincmd l<CR>]])
 vim.keymap.set('n', '<leader>sh', '<Cmd>vsplit<CR>')
 vim.keymap.set('n', '<leader>sv', '<Cmd>split<CR>')
 
+-- Clear search highlighting
+vim.keymap.set('n', '<Esc>', '<Cmd>noh<CR>')
+
 -- Toggle fullscreen for current buffer
 function toggle_fullscreen_buffer()
 	-- autosave feature
