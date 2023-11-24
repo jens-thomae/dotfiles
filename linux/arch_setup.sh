@@ -34,11 +34,8 @@ cp ./ssh/config ~/.ssh/config
 ln -s ./alacritty ~/.config/
 
 # Configuring nvim
-# Installing NvChad
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 # Creating symlink for custom config
-rm -r ~/.config/nvim/lua/custom
-ln -s ../nvchad/custom ~/.config/nvim/lua/
+ln -s ../nvim ~/.config/nvim
 
 # Disable sddm mouse acceleration
 cp ./sddm/50-mouse-acceleration.conf /etc/X11/xorg.conf.d/50-mouse-acceleration.conf
