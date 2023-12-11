@@ -18,6 +18,9 @@ vim.keymap.set('n', '<leader>sv', '<Cmd>split<CR>')
 -- Clear search highlighting
 vim.keymap.set('n', '<Esc>', '<Cmd>noh<CR>')
 
+-- Go to previous buffer
+vim.keymap.set('n', '<leader>b', '<Cmd>b#<CR>')
+
 -- Toggle fullscreen for current buffer
 function toggle_fullscreen_buffer()
 	-- autosave feature
