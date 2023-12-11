@@ -5,11 +5,20 @@ return {
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
 		"onsails/lspkind.nvim",
+		"L3MON4D3/LuaSnip",
+		"saadparwaiz1/cmp_luasnip",
 	},
 	config = function()
 		local cmp = require("cmp")
 		local lspkind = require("lspkind")
+		local luasnip = require("luasnip");
 		cmp.setup({
+			snippet = {
+				expand = function(args)
+					luasnip.lsp_expand(args.body)
+				end,
+			},
+
 			formatting = ({
 				format = lspkind.cmp_format({
     					mode = "symbol_text",
@@ -32,10 +41,10 @@ return {
       				["<C-d>"] = cmp.mapping.scroll_docs(-4),
       				["<C-f>"] = cmp.mapping.scroll_docs(4),
       				["<C-Space>"] = cmp.mapping.complete(),
-      				-- ["<Esc>"] = cmp.mapping.close(),
+      				["<Esc>"] = cmp.mapping.close(),
       				["<Tab>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "s" }),
       				["<S-Tab>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "s" }),
-      				-- ["<CR>"] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true, }),
+				['<CR>'] = cmp.mapping.confirm({ select = true }),
    			}),
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
