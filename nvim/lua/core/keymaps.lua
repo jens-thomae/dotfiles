@@ -11,7 +11,7 @@ vim.keymap.set('n', '<C-j>', [[<Cmd>wincmd j<CR>]])
 vim.keymap.set('n', '<C-k>', [[<Cmd>wincmd k<CR>]])
 vim.keymap.set('n', '<C-l>', [[<Cmd>wincmd l<CR>]])
 
---e split controls
+-- split controls
 vim.keymap.set('n', '<leader>sh', '<Cmd>vsplit<CR>')
 vim.keymap.set('n', '<leader>sv', '<Cmd>split<CR>')
 
