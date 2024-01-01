@@ -1,0 +1,76 @@
+import = ["~/.config/alacritty/alacritty-theme/themes/horizon-dark.yaml"]
+live_config_reload = true
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.bright]
+black = "0xababab"
+blue = "0xa6aaf1"
+cyan = "0x7ad5ff"
+green = "0x57e690"
+magenta = "0xe07de0"
+red = "0xdc7974"
+white = "0xfeffff"
+yellow = "0xece100"
+
+[colors.normal]
+black = "0xababab"
+blue = "0xa6aaf1"
+cyan = "0x7ad5ff"
+green = "0x57e690"
+magenta = "0xe07de0"
+red = "0xdc7974"
+white = "0xfeffff"
+yellow = "0xece100"
+
+[colors.primary]
+foreground = "0xc5c8c6"
+
+[cursor]
+style = "Beam"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 16
+
+[font.bold]
+family = "CaskaydiaCove NF"
+style = "Bold"
+
+[font.bold_italic]
+family = "CaskaydiaCove NF"
+style = "Bold Italic"
+
+[font.italic]
+family = "CaskaydiaCove NF"
+style = "Italic"
+
+[font.normal]
+family = "CaskaydiaCove NF"
+style = "Regular"
+
+[[keyboard.bindings]]
+chars = "\u001Bi"
+key = "I"
+mods = "Command"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[window]
+decorations = "buttonless"
+dynamic_padding = true
+opacity = 0.9
+option_as_alt = "OnlyLeft"
+
+[window.dimensions]
+columns = 100
+lines = 30
+
+[window.padding]
+x = 5
+y = 5
