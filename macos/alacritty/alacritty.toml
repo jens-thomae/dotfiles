@@ -56,6 +56,10 @@ style = "Regular"
 chars = "\u001Bi"
 key = "I"
 mods = "Command"
+[[keyboard.bindings]]
+chars = "\u001Bj"
+key = "J"
+mods = "Command"
 
 [scrolling]
 history = 10000
