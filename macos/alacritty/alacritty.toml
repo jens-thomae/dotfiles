@@ -60,6 +60,30 @@ mods = "Command"
 chars = "\u001Bj"
 key = "J"
 mods = "Command"
+[[keyboard.bindings]]
+chars = "\u001Bn"
+key = "N"
+mods = "Command"
+[[keyboard.bindings]]
+chars = "\u001Bo"
+key = "O"
+mods = "Command"
+[[keyboard.bindings]]
+chars = "\u001Bl"
+key = "L"
+mods = "Command"
+[[keyboard.bindings]]
+chars = "\u001Bh"
+key = "H"
+mods = "Command"
+[[keyboard.bindings]]
+chars = "\u001Bk"
+key = "K"
+mods = "Command"
+[[keyboard.bindings]]
+chars = "\u001Bx"
+key = "X"
+mods = "Command"
 
 [scrolling]
 history = 10000
