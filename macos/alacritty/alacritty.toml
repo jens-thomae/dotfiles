@@ -85,6 +85,23 @@ chars = "\u001Bx"
 key = "X"
 mods = "Command"
 
+[[keyboard.bindings]]
+chars = "\u001BH"
+key = "H"
+mods = "Command|Shift"
+[[keyboard.bindings]]
+chars = "\u001BJ"
+key = "J"
+mods = "Command|Shift"
+[[keyboard.bindings]]
+chars = "\u001BK"
+key = "K"
+mods = "Command|Shift"
+[[keyboard.bindings]]
+chars = "\u001BL"
+key = "L"
+mods = "Command|Shift"
+
 [scrolling]
 history = 10000
 multiplier = 3
