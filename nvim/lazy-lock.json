@@ -35,6 +35,7 @@
   "tender.vim": { "branch": "master", "commit": "1cc8cef28ef10575bf72806959e72d35fec5dc5a" },
   "toggleterm.nvim": { "branch": "main", "commit": "193786e0371e3286d3bc9aa0079da1cd41beaa62" },
   "tokyonight.nvim": { "branch": "main", "commit": "fbe3a27378fdd51a8ddd04f57012455436916a62" },
+  "vim-fugitive": { "branch": "master", "commit": "4f59455d2388e113bd510e85b310d15b9228ca0d" },
   "vim-moonfly-colors": { "branch": "master", "commit": "7f89ca0d2396718078780c802fa18738533a43f1" },
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" }
 }
