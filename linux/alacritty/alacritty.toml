@@ -28,7 +28,7 @@ yellow = "0xece100"
 foreground = "0xc5c8c6"
 
 [cursor]
-style = "Beam"
+style = "Block"
 
 [env]
 TERM = "xterm-256color"
