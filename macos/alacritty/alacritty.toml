@@ -1,7 +1,5 @@
 import = ["~/.config/alacritty/alacritty-theme/themes/horizon-dark.yaml"]
 live_config_reload = true
-[shell]
-program = "/Users/jens/.nix-profile/bin/fish"
 
 [colors]
 draw_bold_text_with_bright_colors = true
@@ -30,7 +28,7 @@ yellow = "0xece100"
 foreground = "0xc5c8c6"
 
 [cursor]
-style = "Beam"
+style = "block"
 
 [env]
 TERM = "xterm-256color"
