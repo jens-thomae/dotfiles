@@ -28,7 +28,7 @@ yellow = "0xece100"
 foreground = "0xc5c8c6"
 
 [cursor]
-style = "Beam"
+style = "Block"
 
 [env]
 TERM = "xterm-256color"
@@ -63,8 +63,8 @@ multiplier = 3
 
 [window]
 decorations = "full"
-dynamic_padding = true
 opacity = 0.9
+dynamic_padding = true
 
 [window.dimensions]
 columns = 100

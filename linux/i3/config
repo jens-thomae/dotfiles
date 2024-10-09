@@ -9,7 +9,9 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+# Mod1 = alt, Mod4 = command
 set $mod Mod1
+set $mod2 Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -34,6 +36,12 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# Start picom compositor
+exec --no-startup-id picom
+
+# Set wallpaper
+exec --no-startup-id feh --bg-fill /home/jens/wallpaper/rocket2.png
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
@@ -56,11 +64,14 @@ tiling_drag modifier titlebar
 # start a terminal
 bindsym $mod+Return exec --no-startup-id alacritty
 
+# execute flameshot (snipping tool)
+bindsym $mod+p exec --no-startup-id flameshot gui
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons -theme dmenu
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -68,28 +79,28 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym $mod2+h focus left
+bindsym $mod2+j focus down
+bindsym $mod2+k focus up
+bindsym $mod2+l focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $mod2+Left focus left
+bindsym $mod2+Down focus down
+bindsym $mod2+Up focus up
+bindsym $mod2+Right focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $mod2+Shift+h move left
+bindsym $mod2+Shift+j move down
+bindsym $mod2+Shift+k move up
+bindsym $mod2+Shift+l move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod2+Shift+Left move left
+bindsym $mod2+Shift+Down move down
+bindsym $mod2+Shift+Up move up
+bindsym $mod2+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+semicolon split h
