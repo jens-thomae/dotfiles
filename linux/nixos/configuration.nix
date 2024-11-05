@@ -1,31 +1,21 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page and in the NixOS manual (accessible by running ‘nixos-help’).
 { config, lib, pkgs, ... }:
+
 let
   unstable = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz") { config.allowUnfree = true; };
-in { services.pipewire = {
-    enable = true;
-    alsa.enable = true;  # Enable ALSA support if needed
-    pulse.enable = true;  # If you want to use PulseAudio compatibility
-  };
-
-  # Enable XDG Portal
-  xdg.portal = {
-    enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  };
-
-  # Enable dconf
-  programs.dconf.enable = true;
+in 
+{ 
 
   # Enabling flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   imports =
     [ # Include the results of the hardware scan.
-      # <home-manager/nixos>
       ./hardware-configuration.nix
-      ./modules/nvidia.nix
+      # ./modules/nvidia.nix
+      # ./modules/amd.nix
+      ./desktop-environment/desktop-environment.nix
     ];
 
   # Set default shell to zsh
@@ -74,12 +64,14 @@ in { services.pipewire = {
   users.users.jens = {
     isNormalUser = true;
     description = "Jens";
-    extraGroups = [ "networkmanager" "wheel" "video"];
+    extraGroups = [ "networkmanager" "wheel" ];
+    packages = with pkgs; [
+	gnome.gnome-software
+	spotify
+	vscode
+	vesktop
+    ];
   };
-
-  # home-manager.users.jens = import ./home.nix;
-  # Backup conflicting files automatically
-  # home-manager.backupFileExtension = "backup";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -87,64 +79,20 @@ in { services.pipewire = {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    ags
-    gnome.adwaita-icon-theme
     alacritty
-    appimage-run
-    appimagekit
-    bitwarden-desktop
-    bibata-cursors
     gcc
-    dconf
     eza
     fastfetch
     firefox
-    flatpak-builder
     git
-    gnome.adwaita-icon-theme
-    gnome-builder
-    gnome.gnome-maps
-    gnome.gnome-themes-extra
-    gnome.nautilus
     glib
-    gsettings-desktop-schemas
-    gtk3
-    gtk4
-    hicolor-icon-theme
-    hyprlock
-    hyprpaper
     iw
-    unstable.iplookup-gtk
-    loupe
-    unstable.mission-center
     neovim
     nodejs_22
-    nvtopPackages.nvidia
-    opendrop
-    owl
     pavucontrol
-    pipewire
-    planify
-    playerctl
-    polkit_gnome
-    unstable.resources
     ripgrep
-    rofi-wayland
-    shared-mime-info
-    swaynotificationcenter
-    spotify
-    squashfsTools
-    steam
-    tracker-miners
     unzip
     wget
-    wireplumber
-    wl-clipboard
-    xdg-desktop-portal
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal-gnome
-    xdg-desktop-portal-hyprland
-    xdg-user-dirs
     zsh
   ];
 
@@ -154,17 +102,9 @@ in { services.pipewire = {
     noto-fonts-color-emoji
   ];
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-  programs.hyprland.enable = true;
+  # List of programs to enable
 
   # List services that you want to enable:
-  services.gvfs.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
