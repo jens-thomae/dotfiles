@@ -41,3 +41,11 @@ alias ld='eza -lD --icons'
 # Starup commands
 clear
 fastfetch
+
+# pnpm
+export PNPM_HOME="/home/jens/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

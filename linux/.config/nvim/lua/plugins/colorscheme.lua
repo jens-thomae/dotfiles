@@ -3,6 +3,9 @@ return {
 		"ribru17/bamboo.nvim",
 		priority = 1000,
 		config = function()
+            require("bamboo").setup({
+                transparent = true
+            })
 			vim.cmd([[colorscheme bamboo]])
 		end
 	},
@@ -22,7 +25,12 @@ return {
         "bluz71/vim-moonfly-colors"
     },
     {
-        "joshdick/onedark.vim"
+        "navarasu/onedark.nvim",
+		config = function()
+            require("bamboo").setup({
+                transparent = true
+            })
+		end
     },
     {
         "folke/tokyonight.nvim"

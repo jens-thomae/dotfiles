@@ -1,0 +1,140 @@
+/* ________Variables________ */
+* {
+    /* ________Window________ */    
+    window-width: 800px;
+    window-height: 550px;
+    window-border: 1.75px;
+    window-border-color: #4A4A4C;
+    window-border-radius: 12px;
+    window-bg-color: rgba(26, 27, 38, 0.65);
+
+    highlight: none;
+
+    bg-col-light: transparent;
+    selected-col: transparent;
+    blue: #89b4fa;
+    fg-col: #cdd6f4;
+    fg-col2: #f38ba8;
+    grey: #6c7086;
+}
+
+/* ________Main window________ */
+window {
+    width: @window-width;
+    height: @window-height;
+    background-color: @window-bg-color;
+    border: @window-border;
+    border-color: @window-border-color;
+    border-radius: @window-border-radius;
+    transparency: "real";
+    location: center;
+    anchor: center;
+}
+
+/* ________Main view inside the window________ */
+mainbox {
+    background-color: transparent;
+    children: [inputbar, listview];
+}
+
+inputbar {
+    children: [textbox-prompt-colon, entry];
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.1);
+    border: 0 0 2px 0;
+}
+
+textbox-prompt-colon {
+    str: "󰍉";
+    font: "Ubuntu Nerd Font Bold 30px";
+    padding: 12px 8px 4px 18px;
+    text-color: rgba(255, 255, 255, 0.7);
+    expand: false;
+}
+
+entry {
+    placeholder: "Search";
+    placeholder-color: rgba(255, 255, 255, 0.3);
+    padding: 18px 14px; 
+    text-color: white;
+    background-color: transparent;
+    cursor: text;
+    font: "SF Pro Bold 14px";
+    remove-outline: true;
+}
+
+entry {
+    cursor: text;
+    spacing: 0;
+    font: "SF Pro Bold 20px";
+    outline: none;
+}
+
+listview {
+    padding: 6px;
+    lines: 7;
+    columns: 1;
+    spacing: 5px;
+    background-color: transparent;
+    fixed-height: true;
+    dynamic: false;
+    scrollbar: false;
+    highlight: none;
+    border-color: rgba(255, 255, 255, 0.0);
+}
+
+element normal.normal {
+    background-color: transparent;
+}
+
+element alternate.normal {
+    background-color: transparent;
+}
+
+element {
+    padding: 12px;
+    border-radius: 8px;
+    background-color: transparent;
+    spacing: 10px;
+    children: [element-icon, element-text];
+}
+
+element-icon {
+    size: 30px;
+    background-color: transparent;
+}
+
+element-text {
+    font: "SF Pro Bold 16px";
+    vertical-align: 0.5;
+    text-color: white;
+    background-color: transparent;
+}
+
+element selected {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+element selected.normal {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+element alternate.normal {
+    background-color: transparent;
+}
+
+element alternate.active {
+    background-color: transparent;
+}
+
+element normal.active {
+    background-color: transparent;
+}
+
+element selected.active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+element hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}

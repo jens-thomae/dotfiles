@@ -6,10 +6,10 @@ vim.keymap.set("n", ";", ":")
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- window control in normal mode
-vim.keymap.set('n', '<C-h>', [[<Cmd>wincmd h<CR>]])
-vim.keymap.set('n', '<C-j>', [[<Cmd>wincmd j<CR>]])
-vim.keymap.set('n', '<C-k>', [[<Cmd>wincmd k<CR>]])
-vim.keymap.set('n', '<C-l>', [[<Cmd>wincmd l<CR>]])
+vim.keymap.set('n', '<M-h>', [[<Cmd>wincmd h<CR>]])
+vim.keymap.set('n', '<M-j>', [[<Cmd>wincmd j<CR>]])
+vim.keymap.set('n', '<M-k>', [[<Cmd>wincmd k<CR>]])
+vim.keymap.set('n', '<M-l>', [[<Cmd>wincmd l<CR>]])
 
 -- split controls
 vim.keymap.set('n', '<leader>sh', '<Cmd>vsplit<CR>')
